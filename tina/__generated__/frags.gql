@@ -1,0 +1,21 @@
+fragment PostParts on Post {
+  __typename
+  title
+  date
+  author
+  image
+  image_url
+  is_popular
+  category
+  tags
+  excerpt
+  body
+}
+
+fragment GalleryParts on Gallery {
+  __typename
+  title
+  description
+  image
+  tags
+}

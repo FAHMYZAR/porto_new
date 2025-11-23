@@ -1,0 +1,6 @@
+{
+  "title": "Mini Celpel",
+  "description": "Server mini yang dikembangkan dengan hp android redmi4x dengan bantuan tools termux dan sshd lalu cloudflare sebagai tunneling nya",
+  "image": "dist/img/galeri/mini_celpel.png",
+  "tags": "Mobile App, Management, Productivity"
+}

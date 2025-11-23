@@ -1,0 +1,81 @@
+╔═══════════════════════════════════════════════════════════════╗
+║     SOLUSI: NPM INSTALL KILLED DI CPANEL SHARED HOSTING       ║
+╔═══════════════════════════════════════════════════════════════╗
+
+🔴 MASALAH:
+npm install di-kill karena memory limit di shared hosting
+
+✅ SOLUSI TERBAIK:
+Upload node_modules yang sudah di-install lokal
+
+═══════════════════════════════════════════════════════════════
+
+📋 LANGKAH-LANGKAH:
+
+1. DI KOMPUTER LOKAL (folder portonew):
+   
+   $ npm install --omit=dev
+   $ ./deploy.sh
+   
+   Saat ditanya "Include node_modules?", jawab: y
+
+2. UPLOAD KE SERVER:
+   
+   Upload file .tar.gz yang dihasilkan ke cPanel
+   Extract di folder fahmyzzx.my.id
+
+3. SETUP NODE.JS APP:
+   
+   - Application Root: /home/nativese/fahmyzzx.my.id
+   - Startup File: server.js
+   - Node Version: 18.x atau 20.x
+   
+   ⚠️ SKIP langkah "Run NPM Install" karena node_modules 
+      sudah ada di package!
+
+4. START APPLICATION:
+   
+   Klik "Start" atau "Restart"
+
+═══════════════════════════════════════════════════════════════
+
+🔧 ALTERNATIF (Jika Tidak Bisa Upload node_modules):
+
+Install dependencies minimal satu-per-satu:
+
+$ npm install express --omit=dev
+$ npm install marked --omit=dev  
+$ npm install js-yaml --omit=dev
+
+Dependencies lain (TinaCMS, Tailwind) hanya untuk development,
+tidak diperlukan di production.
+
+═══════════════════════════════════════════════════════════════
+
+📦 DEPENDENCIES PRODUCTION (Minimal):
+
+WAJIB:
+- express (untuk server)
+
+OPSIONAL (untuk fitur lengkap):
+- marked (render Markdown)
+- js-yaml (parse frontmatter)
+
+TIDAK PERLU di production:
+- @tinacms/* (hanya untuk development)
+- vite (hanya untuk build)
+- tailwindcss (sudah di-compile ke CSS)
+
+═══════════════════════════════════════════════════════════════
+
+⚡ QUICK FIX (Jika Sudah Upload):
+
+1. Hapus folder node_modules yang ada:
+   $ rm -rf node_modules
+
+2. Install minimal dependencies:
+   $ npm install express marked js-yaml --omit=dev
+
+3. Start aplikasi
+
+═══════════════════════════════════════════════════════════════

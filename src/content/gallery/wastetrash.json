@@ -1,0 +1,6 @@
+{
+  "title": "WasteTrash",
+  "description": "Aplikasi mobile untuk pengelolaan sampah dengan fitur tracking, edukasi, dan reward system untuk mendorong masyarakat peduli lingkungan.",
+  "image": "dist/img/galeri/wastetrash.png",
+  "tags": "Flutter, Firebase, Maps API"
+}
