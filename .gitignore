@@ -1,5 +1,9 @@
 node_modules/
 dist/
+*.tar.gz
+*.zip
+deployment-package/
+deployment-lite/
 .DS_Store
 *.log
 .env
