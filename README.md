@@ -139,4 +139,4 @@ MIT License - feel free to use this project for your own portfolio!
 ---
 
 Made with ❤️ by Nuriskha Ainun Fahmi (@fahmyzzx) 
-**Portfolio**: [https://fahmyzzx.com](https://fahmyzzx.com)
+**Portfolio**: [https://fahmyzzx.com](https://fahmyzzx.my.id)
